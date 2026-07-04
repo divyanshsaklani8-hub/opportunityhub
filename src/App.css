@@ -46,8 +46,8 @@ cursor:pointer;
 }
 
 nav a{
+color:#1e293b;
 text-decoration:none;
-color:white;
 }
 
 nav a.active{
@@ -6279,32 +6279,6 @@ nav ul::-webkit-scrollbar{
     align-items:center;
 }
 
-nav{
-    overflow-x:auto;
-    padding:12px;
-}
-
-nav ul{
-    width:auto;
-    margin:0 15px;
-    white-space:nowrap;
-}
-
-.nav-right{
-    width:auto;
-    justify-content:center;
-}
-
-.search-bar{
-    width:140%px;
-    max-width:none;
-}
-
-.theme-btn,
-.logout-btn{
-    width:115px;
-}
-
 .founder-content{
     padding:30px 20px;
 }
@@ -6375,61 +6349,70 @@ nav ul{
 }
 
 .menu-btn{
-display:none;
-background:none;
-border:none;
-font-size:32px;
-cursor:pointer;
-color:#2563eb;
+    display:none;
+    background:none;
+    border:none;
+    color:#2563eb;
+    font-size:34px;
+    cursor:pointer;
+    z-index:1002;
 }
 
 @media(max-width:768px){
 
-.menu-btn{
-display:block;
-}
-
 nav{
-justify-content:space-between;
-position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    padding:14px 20px;
 }
 
-.nav-links{
-position:absolute;
-top:100%;
-left:0;
-
-width:100%;
-
-background:white;
-
-display:flex;
-flex-direction:column;
-
-padding:20px 0;
-
-box-shadow:0 15px 35px rgba(0,0,0,.1);
-
-opacity:0;
-pointer-events:none;
-transform:translateY(-20px);
-
-transition:.3s;
-}
-
-.nav-links.active{
-opacity:1;
-pointer-events:auto;
-transform:translateY(0);
-}
-
-.nav-links li{
-width:100%;
-text-align:center;
-padding:14px 0;
+.menu-btn{
+    display:block;
 }
 
 .nav-right{
-display:none;
+    display:none;
+}
+
+.nav-links{
+    position:absolute;
+    top:100%;
+    left:0;
+
+    width:100%;
+
+    background:#fff;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    margin:0;
+    padding:0;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:1001;
+}
+
+.nav-links.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.nav-links li{
+    width:100%;
+    padding:18px 0;
+    text-align:center;
+    border-bottom:1px solid #eee;
+}
+
+.nav-links li:last-child{
+    border-bottom:none;
 }
 }
