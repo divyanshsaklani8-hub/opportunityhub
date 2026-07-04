@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { FiMenu, FiX } from "react-icons/fi";
 
 type NavbarProps = {
   darkMode: boolean;
@@ -15,6 +17,9 @@ export default function Navbar({
   setSearchTerm,
   handleSearch,
 }: NavbarProps) {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav>
 
@@ -28,14 +33,70 @@ export default function Navbar({
   </Link>
 </h2>
 
-      <ul>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/internships">Internships</NavLink></li>
-        <li><NavLink to="/scholarships">Scholarships</NavLink></li>
-        <li><NavLink to="/hackathons">Hackathons</NavLink></li>
-        <li><NavLink to="/contact">Contact</NavLink></li>
-        <li><NavLink to="/admin">Admin</NavLink></li>
-        <li><NavLink to="/saved">❤️ Saved</NavLink></li>
+<button
+  className="menu-btn"
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  {menuOpen ? <FiX /> : <FiMenu />}
+</button>
+
+      <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+        <li>
+  <NavLink
+    to="/"
+    onClick={() => setMenuOpen(false)}
+  >
+    Home
+  </NavLink>
+</li>
+        <li>
+  <NavLink
+    to="/internships"
+    onClick={() => setMenuOpen(false)}
+  >
+    Internships
+  </NavLink>
+</li>
+        <li>
+  <NavLink
+    to="/scholarships"
+    onClick={() => setMenuOpen(false)}
+  >
+    Scholarships
+  </NavLink>
+</li>
+        <li>
+  <NavLink
+    to="/hackathons"
+    onClick={() => setMenuOpen(false)}
+  >
+    Hackathons
+  </NavLink>
+</li>
+        <li>
+  <NavLink
+    to="/contact"
+    onClick={() => setMenuOpen(false)}
+  >
+    Contact
+  </NavLink>
+</li>
+        <li>
+  <NavLink
+    to="/admin"
+    onClick={() => setMenuOpen(false)}
+  >
+    Admin
+  </NavLink>
+</li>
+        <li>
+  <NavLink
+    to="/saved"
+    onClick={() => setMenuOpen(false)}
+  >
+    ❤️ Saved
+  </NavLink>
+</li>
       </ul>
 
       <div className="nav-right">
