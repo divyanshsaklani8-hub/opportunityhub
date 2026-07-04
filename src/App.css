@@ -6140,3 +6140,230 @@ body,
 }
 
 }
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+html,
+body{
+    overflow-x:hidden;
+    width:100%;
+}
+
+*{
+    max-width:100%;
+}
+
+img,
+video,
+iframe{
+    max-width:100%;
+    height:auto;
+}
+
+/* Tablets */
+@media (max-width:992px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    gap:40px;
+}
+
+.hero-content,
+.hero-left,
+.hero-right{
+    width:100%;
+    max-width:100%;
+}
+
+.hero h1{
+    font-size:48px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.hero-video video{
+    height:auto;
+}
+
+nav{
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+}
+
+.search-bar{
+    width:100%;
+    max-width:260px;
+}
+
+.cards,
+.live-internships-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.details-card,
+.founder-card{
+    grid-template-columns:1fr;
+    flex-direction:column;
+}
+
+.founder-image{
+    height:350px;
+}
+
+.details-card img{
+    width:100%;
+}
+
+.platform-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+.hero{
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:36px;
+}
+
+.hero p{
+    font-size:17px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    align-items:center;
+}
+
+.explore-btn,
+.secondary-btn{
+    width:100%;
+    max-width:300px;
+}
+
+.cards,
+.live-internships-grid,
+.platform-grid,
+.success-grid,
+.why-grid{
+    grid-template-columns:1fr;
+}
+
+.card{
+    min-height:auto;
+}
+
+.stats,
+.stats-container,
+.founder-stats{
+    flex-direction:column;
+    align-items:center;
+}
+
+nav{
+    padding:15px;
+}
+
+nav ul{
+    width:100%;
+    margin:15px 0;
+}
+
+.nav-right{
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.search-bar{
+    width:100%;
+    max-width:none;
+}
+
+.theme-btn,
+.logout-btn{
+    width:100%;
+}
+
+.founder-content{
+    padding:30px 20px;
+}
+
+.founder-content h1{
+    font-size:36px;
+}
+
+.founder-preview{
+    flex-direction:column;
+}
+
+.details-content h1{
+    font-size:34px;
+}
+
+.details-content button{
+    width:100%;
+}
+
+.page{
+    padding:25px 15px;
+}
+
+.contact-box{
+    width:100%;
+}
+
+.modal-box{
+    width:95%;
+}
+
+.platform-modal{
+    width:95%;
+}
+
+}
+
+/* Small Phones */
+@media (max-width:480px){
+
+.hero h1{
+    font-size:30px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+.section-title,
+.why-heading h2,
+.success-heading h2{
+    font-size:30px;
+}
+
+.card h3{
+    font-size:24px;
+}
+
+.logo-box a{
+    font-size:26px;
+}
+
+.navbar-logo{
+    height:55px;
+}
+
+}
