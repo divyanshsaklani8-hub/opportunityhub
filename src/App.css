@@ -5754,6 +5754,33 @@ body,
   .community-left h2 {
     font-size: 32px;
   }
+
+    .community-stats{
+    justify-content:center;
+  }
+
+  .community-icons{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    flex-wrap:nowrap;
+  }
+
+  .community-icons div{
+    flex:0 0 58px;
+    width:58px;
+    height:58px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:0;
+    font-size:28px;
+  }
+  
 }
 
 /* ================= NEWSLETTER ================= */
