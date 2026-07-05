@@ -6447,22 +6447,18 @@ nav{
 @media (max-width:768px){
 
   .logo-track{
-      animation: scrollLogos 10s linear infinite !important;
-      will-change: transform;
-  }
-
-  .company-track{
       display:flex;
-      width:max-content;
+      align-items:center;
       gap:35px;
-      animation:scrollCompanies 12s linear infinite;
+      width:max-content;
+      animation:scrollLogos 12s linear infinite;
       will-change:transform;
   }
 
-  .company-track img{
-      width:65px;
+  .logo-track img{
+      width:70px;
+      height:40px;
       flex-shrink:0;
-      display:block;
   }
 
 }
