@@ -3622,6 +3622,8 @@ font-size:18px;
 .company-slider{
 
 overflow:hidden;
+overflow:hidden;
+    position:relative;
 
 }
 
@@ -6451,8 +6453,14 @@ nav{
   }
 
   .company-track{
-      animation: scrollCompanies 10s linear infinite !important;
+      gap:35px;
+    animation:scrollCompanies 12s linear infinite;
       will-change: transform;
   }
+
+  .company-track img{
+    width:65px;
+    flex-shrink:0;
+}
 
 }
