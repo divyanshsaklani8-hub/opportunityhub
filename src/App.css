@@ -3066,7 +3066,7 @@ transform:translateX(-50%);
 .achievement-track{
     display:flex;
     width:max-content;
-    animation:marquee 22s linear infinite;
+    animation:marquee 30s linear infinite;
     gap:70px;
 }
 
@@ -6255,6 +6255,10 @@ nav ul::-webkit-scrollbar{
     align-items:center;
 }
 
+.hero-title{
+  animation:none;
+}
+
 .explore-btn,
 .secondary-btn{
     width:100%;
@@ -6451,7 +6455,7 @@ nav{
       align-items:center;
       gap:35px;
       width:max-content;
-      animation:scrollLogos 12s linear infinite;
+      animation:scrollLogos 22s linear infinite;
       will-change:transform;
   }
 

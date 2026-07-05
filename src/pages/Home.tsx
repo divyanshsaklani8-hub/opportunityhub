@@ -40,13 +40,13 @@ const [mouse,setMouse]=useState({x:0,y:0});
 
 useEffect(() => {
 
-  const move = (e: MouseEvent) => {
+  if (window.innerWidth <= 768) return;
 
+  const move = (e: MouseEvent) => {
     setMouse({
       x: e.clientX,
       y: e.clientY
     });
-
   };
 
   window.addEventListener("mousemove", move);
@@ -374,6 +374,7 @@ transition={{delay:1.2}}
     muted
     loop
     playsInline
+    preload="none"
     className="hero-video"
   >
     <source src="/hero-video.mp4" type="video/mp4" />
@@ -955,13 +956,15 @@ return matchesSearch && matchesCategory;
 </section>
 <FAQSection />
 <BackToCommunity />
-<div
-  className="mouse-glow"
-  style={{
-    left: mouse.x,
-    top: mouse.y,
-  }}
-/>
+{window.innerWidth > 768 && (
+  <div
+    className="mouse-glow"
+    style={{
+      left: mouse.x,
+      top: mouse.y,
+    }}
+  />
+)}
 
 <section className="vision-box">
 
