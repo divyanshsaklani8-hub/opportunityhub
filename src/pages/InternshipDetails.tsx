@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 
 export default function InternshipDetails() {
   const navigate = useNavigate();
+  const isMobile = window.innerWidth <= 768;
 
   return (
     <>
@@ -39,16 +40,17 @@ export default function InternshipDetails() {
         <div
   style={{
     display: "grid",
-    gridTemplateColumns: "1.2fr 1fr",
-    gap: "40px",
+    gridTemplateColumns: isMobile ? "1fr" : "1.2fr 1fr",
+    gap: isMobile ? "25px" :"40px",
     alignItems: "center",
+    textAlign: isMobile ? "center" : "left",
     marginBottom: "30px",
   }}
 >
   <div>
     <h1
       style={{
-        fontSize: "42px",
+        fontSize: isMobile ? "34px" :"42px",
         marginBottom: "15px",
         color: "#1e3a8a",
       }}
@@ -58,9 +60,9 @@ export default function InternshipDetails() {
 
     <p
       style={{
-        fontSize: "18px",
+        fontSize: isMobile ? "17px" : "18px",
         color: "#555",
-        lineHeight: "32px",
+        lineHeight: isMobile ? "30px" :"32px",
       }}
     >
       Internships help students gain real-world experience, improve technical
@@ -118,6 +120,8 @@ export default function InternshipDetails() {
     alt="Students Working"
     style={{
       width: "100%",
+      maxWidth: isMobile ? "100%" : "500px",
+      margin: "0 auto",
       borderRadius: "18px",
       boxShadow: "0 12px 30px rgba(0,0,0,.15)",
     }}
@@ -140,7 +144,9 @@ export default function InternshipDetails() {
   <div
     style={{
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fit,minmax(180px,1fr))",
+      gridTemplateColumns: isMobile
+  ? "1fr 1fr"
+  : "repeat(auto-fit,minmax(180px,1fr))",
       gap: "25px",
       marginTop: "30px",
     }}
@@ -173,7 +179,7 @@ export default function InternshipDetails() {
 <div
   style={{
     display: "grid",
-    gridTemplateColumns: "1fr 1fr",
+    gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
     gap: "40px",
     alignItems: "center",
   }}
@@ -226,7 +232,9 @@ export default function InternshipDetails() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(180px,1fr))",
+            gridTemplateColumns: isMobile
+  ? "1fr 1fr"
+  : "repeat(auto-fit,minmax(180px,1fr))",
             gap: "15px",
             marginTop: "20px",
           }}
@@ -263,7 +271,7 @@ export default function InternshipDetails() {
 <div
   style={{
     display: "grid",
-    gridTemplateColumns: "1fr 1fr",
+    gridTemplateColumns: isMobile ? "1fr" :"1fr 1fr",
     gap: "40px",
     alignItems: "center",
   }}
@@ -321,7 +329,7 @@ export default function InternshipDetails() {
 <div
   style={{
     display: "grid",
-    gridTemplateColumns: "1fr 1fr",
+    gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
     gap: "40px",
     alignItems: "center",
   }}
