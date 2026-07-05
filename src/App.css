@@ -6441,3 +6441,18 @@ nav{
     border-bottom:none;
 }
 }
+
+/* Faster logo animation only on Mobile */
+@media (max-width:768px){
+
+  .logo-track{
+      animation: scrollLogos 10s linear infinite !important;
+      will-change: transform;
+  }
+
+  .company-track{
+      animation: scrollCompanies 10s linear infinite !important;
+      will-change: transform;
+  }
+
+}
