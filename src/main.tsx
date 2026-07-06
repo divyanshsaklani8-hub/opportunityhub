@@ -36,6 +36,9 @@ import InternshipGuide from "./pages/InternshipGuide";
 import ScholarshipGuide from "./pages/ScholarshipGuide";
 import HackathonGuide from "./pages/HackathonGuide";
 
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>

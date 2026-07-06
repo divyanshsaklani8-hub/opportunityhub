@@ -6535,3 +6535,54 @@ nav{
   }
 
 }
+
+/* ===========================
+   DATABASE PAGES - MOBILE FIX
+=========================== */
+@media (max-width:768px){
+
+  /* Main page container */
+  .database-page{
+    max-width:100% !important;
+    width:100% !important;
+    margin:20px auto !important;
+    padding:15px !important;
+    overflow-x:hidden;
+  }
+
+  /* Heading */
+  .database-page h1{
+    font-size:32px !important;
+  }
+
+  .database-page p{
+    font-size:16px !important;
+  }
+
+  /* Table wrapper */
+  .database-table{
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    border-radius:12px;
+  }
+
+  .database-table table{
+    min-width:760px;
+  }
+
+  /* Button section */
+  .database-btn{
+    width:100%;
+    text-align:center;
+    margin:35px 0 !important;
+  }
+
+  .database-btn button{
+    width:100%;
+    max-width:330px;
+    padding:15px;
+    font-size:17px;
+  }
+
+}

@@ -102,13 +102,14 @@ export default function ViewLiveScholarshipDatabase() {
         handleSearch={() => {}}
       />
 
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "40px auto",
-          padding: "20px",
-        }}
-      >
+     <div
+  className="database-page"
+  style={{
+    maxWidth: "1200px",
+    margin: "40px auto",
+    padding: "20px",
+  }}
+>
         <button
           onClick={() => navigate(-1)}
           style={{
@@ -147,13 +148,14 @@ export default function ViewLiveScholarshipDatabase() {
         </p>
 
         <div
-          style={{
-            overflowX: "auto",
-            background: "#fff",
-            borderRadius: "15px",
-            boxShadow: "0 5px 15px rgba(0,0,0,.08)",
-          }}
-        >
+  className="database-table"
+  style={{
+    overflowX:"auto",
+    background:"#fff",
+    borderRadius:"15px",
+    boxShadow:"0 5px 15px rgba(0,0,0,.08)",
+  }}
+>
           <table
             style={{
               width: "100%",
@@ -230,11 +232,12 @@ export default function ViewLiveScholarshipDatabase() {
         </div>
 
         <div
-          style={{
-            marginTop: "50px",
-            textAlign: "center",
-          }}
-        >
+  className="database-btn"
+  style={{
+    marginTop:"50px",
+    textAlign:"center",
+  }}
+>
           <button
             onClick={() => navigate("/more-scholarships")}
             style={{
