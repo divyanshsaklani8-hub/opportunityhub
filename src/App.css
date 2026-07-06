@@ -6546,7 +6546,7 @@ nav{
     max-width:100% !important;
     width:100% !important;
     margin:20px auto !important;
-    padding:15px !important;
+    padding:16px !important;
     overflow-x:hidden;
   }
 
@@ -6557,18 +6557,6 @@ nav{
 
   .database-page p{
     font-size:16px !important;
-  }
-
-  /* Table wrapper */
-  .database-table{
-    width:100%;
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
-    border-radius:12px;
-  }
-
-  .database-table table{
-    min-width:760px;
   }
 
   /* Button section */
@@ -6583,6 +6571,48 @@ nav{
     max-width:330px;
     padding:15px;
     font-size:17px;
+  }
+
+}
+
+/* ==========================
+   DATABASE TABLE - MOBILE FIX
+   ========================== */
+
+.database-table {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.database-table table {
+  width: 100%;
+  min-width: 900px;   /* Internship & Scholarship ke liye */
+  border-collapse: collapse;
+}
+
+.database-table th,
+.database-table td {
+  white-space: nowrap;
+}
+
+/* Mobile Only */
+@media (max-width:768px){
+
+  .database-table{
+    width:100%;
+    overflow-x:auto;
+    border-radius:12px;
+  }
+
+  .database-table table{
+    min-width:900px;
+  }
+
+  .database-table th,
+  .database-table td{
+    padding:12px;
+    font-size:14px;
   }
 
 }

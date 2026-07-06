@@ -149,11 +149,12 @@ export default function VisitLiveInternshipDatabase() {
   }}
 >
           <table
-            style={{
-              width: "100%",
-              borderCollapse: "collapse",
-            }}
-          >
+  style={{
+    width: "100%",
+    minWidth: "900px",
+    borderCollapse: "collapse",
+  }}
+>
             <thead
               style={{
                 background: "#2563eb",
