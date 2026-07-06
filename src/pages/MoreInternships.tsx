@@ -141,7 +141,7 @@ export default function MoreInternships() {
   style={{
     display: "grid",
     gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-    gap: "25px",
+    gap: window.innerWidth <= 768 ? "10px" : "25px",
     alignItems: "stretch",
   }}
 >
@@ -149,17 +149,55 @@ export default function MoreInternships() {
             <div
               key={index}
               style={{
-                background: "#fff",
-                borderRadius: "15px",
-                padding: "25px",
-                boxShadow: "0 5px 15px rgba(0,0,0,.08)",
-              }}
+  background: "#fff",
+  borderRadius: "15px",
+  padding: window.innerWidth <= 768 ? "12px" : "25px",
+  boxShadow: "0 5px 15px rgba(0,0,0,.08)",
+  minWidth: 0,
+  overflow: "hidden",
+  transition: "0.3s",
+}}
             >
-              <h2 style={{ color: "#2563eb" }}>{job.company}</h2>
+              <h2
+  style={{
+    color: "#2563eb",
+    fontSize: window.innerWidth <= 768 ? "14px" : "28px",
+    wordBreak: "break-word",
+    overflowWrap: "anywhere",
+  }}
+>
+  {job.company}
+</h2>
 
-              <p><b>Role:</b> {job.role}</p>
-              <p><b>Location:</b> {job.location}</p>
-              <p><b>Stipend:</b> {job.stipend}</p>
+              <p
+  style={{
+    fontSize: window.innerWidth <= 768 ? "12px" : "16px",
+    wordBreak: "break-word",
+    overflowWrap: "anywhere",
+  }}
+>
+  <b>Role:</b> {job.role}
+</p>
+
+<p
+  style={{
+    fontSize: window.innerWidth <= 768 ? "12px" : "16px",
+    wordBreak: "break-word",
+    overflowWrap: "anywhere",
+  }}
+>
+  <b>Location:</b> {job.location}
+</p>
+
+<p
+  style={{
+    fontSize: window.innerWidth <= 768 ? "12px" : "16px",
+    wordBreak: "break-word",
+    overflowWrap: "anywhere",
+  }}
+>
+  <b>Stipend:</b> {job.stipend}
+</p>
 
               <button
                 onClick={() => {
@@ -171,7 +209,8 @@ export default function MoreInternships() {
                   background: "#2563eb",
                   color: "#fff",
                   border: "none",
-                  padding: "12px",
+                  padding: window.innerWidth <= 768 ? "8px" : "12px",
+fontSize: window.innerWidth <= 768 ? "12px" : "16px",
                   borderRadius: "10px",
                   cursor: "pointer",
                   fontWeight: "bold",

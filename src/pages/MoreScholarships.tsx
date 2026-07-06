@@ -156,27 +156,32 @@ export default function MoreScholarships() {
         </p>
 
         <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
-            gap: "25px",
-          }}
-        >
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+    gap: window.innerWidth <= 768 ? "10px" : "25px",
+    alignItems: "stretch",
+  }}
+>
                       {scholarships.map((item, index) => (
             <div
               key={index}
               style={{
                 background: "#fff",
-                borderRadius: "16px",
-                padding: "25px",
+                borderRadius: "15px",
+                padding: window.innerWidth <= 768 ? "12px" : "25px",
                 boxShadow: "0 5px 15px rgba(0,0,0,.08)",
+                minWidth: 0,
+  overflow: "hidden",
                 transition: "0.3s",
               }}
             >
               <h2
                 style={{
                   color: "#2563eb",
-                  fontSize: "22px",
+                  fontSize: window.innerWidth <= 768 ? "14px" : "28px",
+                  wordBreak: "break-word",
+    overflowWrap: "anywhere",
                   marginBottom: "10px",
                 }}
               >
@@ -209,11 +214,11 @@ export default function MoreScholarships() {
                   background: "#2563eb",
                   color: "#fff",
                   border: "none",
-                  padding: "12px",
+                  padding: window.innerWidth <= 768 ? "8px" : "12px",
+fontSize: window.innerWidth <= 768 ? "12px" : "16px",
                   borderRadius: "10px",
                   cursor: "pointer",
                   fontWeight: "bold",
-                  fontSize: "16px",
                 }}
               >
                 Apply Now
